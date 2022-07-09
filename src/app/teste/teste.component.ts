@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+declare var $: any
 @Component({
   selector: 'app-teste',
   templateUrl: './teste.component.html',
@@ -7,17 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TesteComponent implements OnInit {
 
-  preco:number = 0
+  preco: number = 0
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
-  aumentaovalor(){
-    this.preco++
-  }
-  abaixaovalor(){
-    this.preco--
+  abrirNavBar() {
+    $('.ui.labeled.icon.sidebar')
+      .sidebar('toggle')
+      ;
   }
 }
